@@ -1,45 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Travel Photo Collection</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VinFast - Electric Future from Vietnam</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background-color: #f0f0f0;
+      padding: 0;
+      background-color: #f7f7f7;
       color: #333;
     }
+
     header {
-      background-color: #2c3e50;
-      padding: 20px;
-      text-align: center;
+      background-color: #0a0a0a;
       color: white;
+      padding: 40px 20px;
+      text-align: center;
     }
-    h1 {
+
+    header h1 {
       margin: 0;
+      font-size: 2.5em;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 15px;
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
       padding: 20px;
     }
-    .gallery img {
+
+    .section {
+      background-color: white;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .section img {
       width: 100%;
       height: auto;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
+      display: block;
     }
-    .gallery img:hover {
-      transform: scale(1.03);
+
+    .section-content {
+      padding: 20px;
     }
+
+    .section-content h2 {
+      margin-top: 0;
+      font-size: 1.8em;
+    }
+
+    .section-content p {
+      line-height: 1.6;
+    }
+
     footer {
-      background-color: #34495e;
+      background-color: #0a0a0a;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       margin-top: 40px;
     }
   </style>
@@ -47,23 +70,48 @@
 <body>
 
   <header>
-    <h1>Travel Photo Collection</h1>
-    <p>Explore beautiful places around the world</p>
+    <h1>VinFast – Driving the Electric Future</h1>
+    <p>Vietnam's automotive brand making global waves</p>
   </header>
 
-  <main class="gallery">
-    <img src="https://source.unsplash.com/featured/?beach" alt="Beach">
-    <img src="https://source.unsplash.com/featured/?mountains" alt="Mountains">
-    <img src="https://source.unsplash.com/featured/?city" alt="City">
-    <img src="https://source.unsplash.com/featured/?forest" alt="Forest">
-    <img src="https://source.unsplash.com/featured/?desert" alt="Desert">
-    <img src="https://source.unsplash.com/featured/?island" alt="Island">
-    <img src="https://source.unsplash.com/featured/?waterfall" alt="Waterfall">
-    <img src="https://source.unsplash.com/featured/?sunset" alt="Sunset">
-  </main>
+  <div class="container">
+
+    <div class="section">
+      <img src="https://images.unsplash.com/photo-1698230737257-03281879eb8f?auto=format&fit=crop&w=1200&q=80" alt="VinFast Car VF 8">
+      <div class="section-content">
+        <h2>About VinFast</h2>
+        <p>VinFast is a Vietnamese electric vehicle (EV) manufacturer, part of the Vingroup conglomerate. Founded in 2017, VinFast aims to revolutionize sustainable transportation with high-quality, affordable electric cars, buses, and scooters for global markets.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="https://images.unsplash.com/photo-1712142853096-0095f25c5b14?auto=format&fit=crop&w=1200&q=80" alt="VinFast VF 9 SUV">
+      <div class="section-content">
+        <h2>Popular Models</h2>
+        <p>VinFast’s main lineup includes electric SUVs such as the VF 8 and VF 9. These models come equipped with modern design, long battery range, smart infotainment systems, and advanced driver-assist features.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="https://images.unsplash.com/photo-1698230722921-e44f947dbb66?auto=format&fit=crop&w=1200&q=80" alt="VinFast Showroom in Vietnam">
+      <div class="section-content">
+        <h2>Global Expansion</h2>
+        <p>VinFast is expanding globally, with production facilities in Vietnam and plans to build a factory in North Carolina, USA. The company has entered markets such as the U.S., Canada, Europe, and continues to grow its global presence in the EV industry.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="https://images.unsplash.com/photo-1710670455663-f264f3b10456?auto=format&fit=crop&w=1200&q=80" alt="Electric Future">
+      <div class="section-content">
+        <h2>Commitment to Sustainability</h2>
+        <p>VinFast focuses on producing electric vehicles to reduce emissions and promote clean energy. With rapid development and innovation, VinFast is committed to building a sustainable future through green mobility solutions.</p>
+      </div>
+    </div>
+
+  </div>
 
   <footer>
-    <p>&copy; 2025 Travel Photo Collection. All rights reserved.</p>
+    <p>&copy; 2025 VinFast Fan Page. All rights reserved.</p>
   </footer>
 
 </body>
